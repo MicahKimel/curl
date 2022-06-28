@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #***************************************************************************
 #                                  _   _ ____  _
-#  Project                     ___| | | |  _ \| |
+# Project                      ___| | | |  _ \| |
 #                             / __| | | | |_) | |
 #                            | (__| |_| |  _ <| |___
 #                             \___|\___/|_| \_\_____|
@@ -26,12 +26,12 @@
 # universal binary libcurl.framework for Mac OS X 10.4 or greater.
 #
 # Hendrik Visage:
-#  Generalizations added since  Snowleopard (10.6) do not include
+# Generalizations added since  Snowleopard (10.6) do not include
 # the 10.4u SDK.
 #
 # Also note:
 # 10.5 is the *ONLY* SDK that support PPC64 :( -- 10.6 do not have ppc64 support
-#If you need to have PPC64 support then change below to 1
+# If you need to have PPC64 support then change below to 1
 PPC64_NEEDED=0
 # Apple does not support building for PPC anymore in Xcode 4 and later.
 # If you're using Xcode 3 or earlier and need PPC support, then change
@@ -39,13 +39,13 @@ PPC64_NEEDED=0
 PPC_NEEDED=0
 
 # For me the default is to develop for the platform I am on, and if you
-#desire compatibility with older versions then change USE_OLD to 1 :)
+# desire compatibility with older versions then change USE_OLD to 1 :)
 USE_OLD=0
 
 VERSION=`/usr/bin/sed -ne 's/^#define LIBCURL_VERSION "\(.*\)"/\1/p' include/curl/curlver.h`
 FRAMEWORK_VERSION=Versions/Release-$VERSION
 
-#I also wanted to "copy over" the system, and thus the reason I added the
+# I also wanted to "copy over" the system, and thus the reason I added the
 # version to Versions/Release-7.20.1 etc.
 # now a simple rsync -vaP libcurl.framework /Library/Frameworks will install it
 # and setup the right paths to this version, leaving the system version
